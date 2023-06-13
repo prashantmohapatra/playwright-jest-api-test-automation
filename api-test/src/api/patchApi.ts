@@ -4,7 +4,7 @@ import apiManager from "./apiManager";
 
 class PatchApi {
 
-    POSTS_URL: String = ENV.BASE_URL + "/posts";
+    POSTS_URL: string = ENV.BASE_URL + "/posts";
 
     headers = {'custom-header': 'patch-test'};
 
@@ -12,7 +12,7 @@ class PatchApi {
      * PATCH /posts/{:id}
      * @return APIResponse
      */
-    async updateUserPost(id: number, body: String) {
+    async updateUserPost(id: number, body: string) {
         return await apiManager.patch(this.POSTS_URL + '/' + id, this.headers, body);
     }
 

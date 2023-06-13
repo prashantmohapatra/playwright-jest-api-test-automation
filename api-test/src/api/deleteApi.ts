@@ -4,7 +4,7 @@ import apiManager from "./apiManager";
 
 class DeleteApi {
 
-    POSTS_URL: String = ENV.BASE_URL + "/posts";
+    POSTS_URL: string = ENV.BASE_URL + "/posts";
 
     headers = {'custom-header': 'delete-test'};
 

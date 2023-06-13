@@ -1,13 +1,21 @@
 import getApi from "../api/getApi";
+import {Reporter} from "jest-allure/dist/Reporter";
 
+declare const reporter: Reporter;
 
 describe("Retrieve user posts", () => {
 
     test("Get user posts", async() => {
-        const response = await getApi.getUserPosts();
+
+        await reporter
+            .description("DESC: Get user posts");
+
+        let response = await getApi.getUserPosts();
 
         expect(response.ok()).toBeTruthy();
         expect(response.status()).toBe(200);
+
+        await getApi.getUserPost(1);
     })
 
     test("Get user post ", async () => {

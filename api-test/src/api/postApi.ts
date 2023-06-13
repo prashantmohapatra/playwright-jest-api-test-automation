@@ -4,7 +4,7 @@ import apiManager from "./apiManager";
 
 class PostApi {
 
-    POSTS_URL: String = ENV.BASE_URL + "/posts";
+    POSTS_URL: string = ENV.BASE_URL + "/posts";
 
     headers = {'custom-header': 'post-test'};
 
@@ -13,7 +13,7 @@ class PostApi {
      * @param body request body
      * @return APIResponse
      */
-    async createUserPost(body: String) {
+    async createUserPost(body: string) {
         return await apiManager.post(this.POSTS_URL, this.headers, body);
     }
 

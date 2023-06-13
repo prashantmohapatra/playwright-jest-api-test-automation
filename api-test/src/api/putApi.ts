@@ -4,7 +4,7 @@ import apiManager from "./apiManager";
 
 class PutApi {
 
-    POSTS_URL: String = ENV.BASE_URL + "/posts";
+    POSTS_URL: string = ENV.BASE_URL + "/posts";
 
     headers = {'custom-header': 'put-test'};
 
@@ -14,7 +14,7 @@ class PutApi {
      * @param body request body
      * @return APIResponse
      */
-    async updateUserPost(id: number, body: String) {
+    async updateUserPost(id: number, body: string) {
         return await apiManager.put(this.POSTS_URL + '/' + id, this.headers, body);
     }
 

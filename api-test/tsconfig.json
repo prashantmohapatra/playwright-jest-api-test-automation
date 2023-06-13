@@ -3,14 +3,7 @@
     "target": "es6",
     "strict": true,
     "module": "commonjs",
-    "sourceMap": true
-//    "moduleResolution": "node",
-//    "allowSyntheticDefaultImports": true,
-//    "lib": [
-//      "decorators",
-//      "dom",
-//      "es5",
-//      "scripthost"
-//    ]
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
   }
 }
