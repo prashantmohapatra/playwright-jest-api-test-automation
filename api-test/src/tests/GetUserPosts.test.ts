@@ -10,7 +10,7 @@ describe("Retrieve user posts", () => {
         await reporter
             .description("DESC: Get user posts");
 
-        let response = await getApi.getUserPosts();
+        const response = await getApi.getUserPosts();
 
         expect(response.ok()).toBeTruthy();
         expect(response.status()).toBe(200);

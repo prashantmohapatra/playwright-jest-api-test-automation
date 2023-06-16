@@ -1,4 +1,3 @@
-import {APIResponse} from "@playwright/test";
 import apiManager from "./apiManager";
 import {ENV} from "../../environment";
 
@@ -11,7 +10,7 @@ class DeleteApi {
     /**
      * DELETE /posts/:id
      * @param id Post ID
-     * @return APIResponse
+     * @returns The Api Response
      */
     async deleteUserPost(id: number) {
         return await apiManager.delete(this.POSTS_URL + '/' + id, this.headers);

@@ -1,4 +1,3 @@
-import {APIResponse} from "@playwright/test";
 import apiManager from "./apiManager";
 import {ENV} from "../../environment";
 
@@ -10,7 +9,7 @@ class PatchApi {
 
     /**
      * PATCH /posts/{:id}
-     * @return APIResponse
+     * @returns The Api Response
      */
     async updateUserPost(id: number, body: string) {
         return await apiManager.patch(this.POSTS_URL + '/' + id, this.headers, body);

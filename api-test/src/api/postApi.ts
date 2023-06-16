@@ -1,4 +1,3 @@
-import {APIResponse} from "@playwright/test";
 import apiManager from "./apiManager";
 import {ENV} from "../../environment";
 
@@ -11,7 +10,7 @@ class PostApi {
     /**
      * POST /posts
      * @param body request body
-     * @return APIResponse
+     * @returns The Api Response
      */
     async createUserPost(body: string) {
         return await apiManager.post(this.POSTS_URL, this.headers, body);

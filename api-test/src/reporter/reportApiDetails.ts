@@ -61,7 +61,7 @@ class ReportApiDetails {
         let headersString = "";
 
         for (const key in headers) {
-            if (headers.hasOwnProperty(key)) {
+            if (Object.hasOwnProperty.call(headers, key)) {
                 const value = headers[key];
                 headersString = headersString + `${key}: ${value}\n`;
             }

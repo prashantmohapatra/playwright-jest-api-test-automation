@@ -1,6 +1,5 @@
-import {APIResponse} from "@playwright/test";
 import apiManager from "./apiManager";
- import {ENV} from "../../environment";
+import {ENV} from "../../environment";
 
 class GetApi {
 
@@ -10,7 +9,7 @@ class GetApi {
 
     /**
      * GET /posts
-     * @return APIResponse
+     * @returns The Api Response
      */
     async getUserPosts() {
         return await apiManager.get(this.POSTS_URL, this.headers);
@@ -19,7 +18,7 @@ class GetApi {
     /**
      * GET /post/:id
      * @param id Post ID
-     * @return APIResponse
+     * @returns The Api Response
      */
     async getUserPost(id: number) {
         return await apiManager.get(this.POSTS_URL + '/' + id, this.headers);
