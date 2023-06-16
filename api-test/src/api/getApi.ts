@@ -1,11 +1,12 @@
 import {APIResponse} from "@playwright/test";
 import apiManager from "./apiManager";
+ import {ENV} from "../../environment";
 
 class GetApi {
 
-    POSTS_URL: string = "https://jsonplaceholder.typicode.com/posts";//ENV.BASE_URL + "/posts"; //TODO: Remove hardcoding
+    POSTS_URL: string = ENV.BASE_URL + "/posts";
 
-    headers = {'custom-header': 'get-test'};
+        headers = {'custom-header': 'get-test'};
 
     /**
      * GET /posts

@@ -1,6 +1,6 @@
 import {APIResponse} from "@playwright/test";
-import ENV from "../utils/env";
 import apiManager from "./apiManager";
+import {ENV} from "../../environment";
 
 class PostApi {
 

@@ -10,6 +10,6 @@ export function stringifyObject(value: any) {
  * Parse String to object
  * @return APIResponse
  */
-function parseStringToObject(value: String) {
+function parseStringToObject(value: string) {
     return JSON.parse(value);
 }
